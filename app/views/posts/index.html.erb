@@ -1,0 +1,48 @@
+<div class = "doc">
+    <header>
+          <div id = "header_center">
+            <div id = "page_banner">
+              <%= link_to image_tag("banner.png"), posts_path %>
+            </div>
+            <div id = "wawel">
+              <%= image_tag("wawel.png") %>
+            </div>
+          </div>
+
+          <div class = "switch_mode">
+              <%= link_to "Admin Mode", "/index_admin" %>
+          </div>
+    </header>
+
+    <div class = "content">
+          <% @posts.each do |post| %>
+              <div class = "post">
+                <div class = "post_date">
+                    <%= post.created_at.getlocal.to_date %>
+                </div>
+
+                <div class = "post_title">
+                    <%= post.title %>
+                  <hr>
+                </div>
+
+                <div class = "post_text">
+                    <% if post.text.length > 300 %>
+                        <%= post.text.first(300) + "..." %>
+                    <% else %>
+                        <%= post.text %>
+                    <% end %>
+                </div>
+
+                <div class = "post_options">
+                    <%= link_to "więcej...", post_path(post) %>
+                </div>
+
+              </div>
+          <% end %>
+    </div>
+
+    <footer>
+        <p id = "sign">created by Marcin Szot</p>
+    </footer>
+</div>

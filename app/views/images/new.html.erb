@@ -1,0 +1,40 @@
+<div class = "doc">
+  <header>
+    <div id = "header_center">
+      <div id = "page_banner">
+        <%= link_to image_tag("banner.png"), posts_path %>
+      </div>
+      <div id = "wawel">
+        <%= image_tag("wawel.png") %>
+      </div>
+    </div>
+
+    <div class = "switch_mode">
+      <%= link_to "Admin Mode", "/index_admin" %>
+    </div>
+  </header>
+
+  <div class = "content">
+    <div class = "post_full">
+      <%= form_for([@post,@post.images.build], :html => {:multipart => true}) do |f| %>
+          <%= f.label "Tytuł zdjęcia: " %> </br>
+          <%= f.text_field :title %> </br>
+
+          <%= f.label "Opis zdjęcia: " %> </br>
+          <%= f.text_area :description %> </br>
+
+          <%= f.file_field :photo %>
+          <%= f.submit "Dodaj wybrane zdjęcie" %>
+      <% end %>
+    </div>
+
+    <div class = "post_back">
+      <%= link_to "Wszystkie posty", "/index_admin" %>
+    </div>
+  </div>
+
+  <footer>
+    <p id = "sign">created by Marcin Szot</p>
+  </footer>
+
+</div>

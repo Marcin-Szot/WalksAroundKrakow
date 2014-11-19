@@ -1,0 +1,212 @@
+html {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    background: #333333;
+}
+
+.doc {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    min-height: 100%;
+    position: relative;
+    background: none;
+    overflow: hidden;
+    font-family: "Corbel", "Verdana", "Kalinga";
+}
+
+header {
+    background-image:url('dark_grey_brick.png');
+    width: 100%;
+    height: 150px;
+    text-align: left;
+    color: whitesmoke;
+    margin-bottom: 0px;
+    box-shadow: 0px 0px 30px -1px #000;
+}
+
+#header_center {
+    border: none;
+    width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+header #page_banner {
+    width: 320px;
+    margin-left: 0px;
+    margin-top: 20px;
+    float: left;
+}
+
+header #wawel {
+    width: 236px;
+    height: 96px;
+    margin-right: 5px;
+    margin-top: 14px;
+    position: relative;
+    float: right;
+}
+
+.switch_mode {
+    background: none;
+    position: absolute;
+    font-size: 10px;
+    top: 7px;
+    right: 10px;
+    text-decoration: none;
+}
+
+footer {
+    background-image:url('dark_grey_brick_foot.png');
+    width: 100%;
+    height: 60px;
+    text-align: right;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    color: lightgrey;
+    margin-top: 40px;
+}
+
+footer #sign {
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+.content {
+    border: none;
+    width: 1000px;
+    margin: auto;
+    margin-top: -40px;
+    background: whitesmoke;
+    padding-bottom: 80px;
+    padding-top: 50px;
+    box-shadow: 0px 0px 30px -1px #000;
+}
+
+.post {
+    background: none;
+    border: none;
+    margin: auto;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    height: 180px;
+    width: 90%;
+}
+
+.post_full {
+    margin: auto;
+    margin-top: 15px;
+    width: 90%;
+    border: none;
+}
+
+.post_date {
+    width: 100%;
+    font-size: 15px;
+    border: none;
+    text-align: right;
+    color: graytext;
+}
+
+.post_title {
+    width: 40%;
+    font-family: "Minion Pro", "Times New Roman";
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+.post_text {
+    width: 100%;
+    font-size: 16px;
+    border: none;
+    text-align: justify;
+    color: darkslategray;
+}
+
+.post_options {
+    float: right;
+}
+
+.post_back {
+    font-size: 17px;
+    border: none;
+    text-align: right;
+    padding-right: 50px;
+}
+
+.photos_bar {
+    width: 1000px;
+    border: none;
+    overflow: hidden;
+    background: none;
+    margin-top: 30px;
+}
+
+.photo_item {
+    border: none;
+    background: none;
+    width: 331px;
+    height: 300px;
+    text-align: center;
+    padding-top: 10px;
+    float: left;
+}
+
+.mini_photo_title {
+}
+
+#post_creation {
+    font-size: 17px;
+    border: none;
+    text-align: right;
+    padding-right: 50px;
+}
+
+#image_content {
+    text-align: center;
+    background: none;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+#photo_title {
+    font-size: 17px;
+    font-weight: bold;
+    color: gray;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#photo_description {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: grey;
+    text-align: center;
+}
+
+textarea {
+    width: 100%;
+    height: 250px;
+}
+
+hr {
+    height: 5px;
+    border: none;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    background: #99CCFF;
+    width: 100%;
+}
