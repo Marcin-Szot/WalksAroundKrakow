@@ -4,10 +4,12 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all.reverse_order
+    @categories = Category.all
   end
 
   def index_admin
     @posts = Post.all.reverse_order
+    @categories = Category.all
   end
 
   def new

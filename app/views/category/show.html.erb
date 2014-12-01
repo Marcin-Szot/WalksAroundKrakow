@@ -16,28 +16,30 @@
 
   <div class = "content">
     <div class = "post_full">
-      <%= form_for([@post,@post.images.build], :html => {:multipart => true}) do |f| %>
-          <%= f.label "Tytuł zdjęcia: " %> </br>
-          <%= f.text_field :title %> </br>
 
-          <%= f.label "Opis zdjęcia: " %> </br>
-          <%= f.text_area :description %> </br>
-
-          <%= f.label "Kategoria: " %> </br>
-          <%= f.text_field :category %> </br>
-            </br>
-          <%= f.file_field :photo %>
-          <%= f.submit "Dodaj wybrane zdjęcie" %>
-      <% end %>
+      <div class = "post_title">
+        <%= @category.title %>
+        <hr>
+      </div>
     </div>
 
+    <div class = "photos_bar">
+      <% @images.each do |image| %>
+          <div class = "photo_item">
+            <% @post = image.post %>
+            <%= link_to image_tag(image.photo_url(:thumb).to_s), post_image_path(@post, image) %>
+            <div class = "mini_photo_title">
+              <%= image.title %>
+            </div>
+          </div>
+      <% end %>
+    </div>
     <div class = "post_back">
-      <%= link_to "Wszystkie posty", "/index_admin" %>
+      <%= link_to "Posty", posts_path %>
     </div>
   </div>
 
   <footer>
     <p id = "sign">created by Marcin Szot</p>
   </footer>
-
 </div>

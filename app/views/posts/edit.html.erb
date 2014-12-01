@@ -40,9 +40,24 @@
 
         <div class = "photos_bar">
             <% @post.images.each do |image| %>
-                <div class = "photo_item">
-                    <%= image_tag image.photo_url(:thumb).to_s %> </br>
+                <div class = "edit_photo_item">
+                    <%= image_tag image.photo_url(:thumb).to_s %>
+                  <div class = "editing_form">
+                    <%= form_for :image, url: post_image_path(@post, image), method: :patch do |f| %>
+                        <%= f.label "Tytuł:" %>
+                        <%= f.text_field :title %> <br>
+                        <%= f.label "Opis:" %> <br>
+                        <%= f.text_area :description %> <br>
+                        <% if  image.category then %>
+                            <%= f.label "Kategoria (" + image.category + "):" %>
+                        <% else %>
+                            <%= f.label "Kategoria ():" %>
+                        <% end %>
+                        <%= f.text_field :category %> <br>
+                        <%= f.submit "Zapisz" %>
+                    <% end %>
                     <%= link_to 'Usuń zdjęcie', [image.post, image], method: :delete, data: {confirm: "Are you sure?"} %>
+                  </div>
                 </div>
             <% end %>
         </div>

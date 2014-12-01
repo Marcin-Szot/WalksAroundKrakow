@@ -1,0 +1,46 @@
+<div class = "doc">
+  <header>
+    <div id = "header_center">
+      <div id = "page_banner">
+        <%= link_to image_tag("banner.png"), posts_path %>
+      </div>
+      <div id = "wawel">
+        <%= image_tag("wawel.png") %>
+      </div>
+    </div>
+
+    <div class = "switch_mode">
+      <%= link_to "Admin Mode", "/index_admin" %>
+    </div>
+  </header>
+
+  <div class = "content">
+    <div class = "post_full">
+      <%= form_for :category, url: category_index_path do |f| %>
+          <% if @category.errors.any? %>
+              <div id = "error_explanation">
+                <h2>This post can not be saved because of <%= pluralize(@category.errors.count, "error") %>:</h2>
+                <ul>
+                  <% @category.errors.full_messages.each do |msg| %>
+                      <li><%= msg %></li>
+                  <% end %>
+                </ul>
+              </div>
+          <% end %>
+
+          <%= f.label "Nazwa Kategorii:" %> <br>
+          <%= f.text_field :title %> <br>
+
+          <%= f.submit "Zapisz" %>
+      <% end %>
+    </div>
+
+    <div class = "post_back">
+      <%= link_to "Posty", "/index_admin" %>
+    </div>
+  </div>
+
+  <footer>
+    <p id = "sign">created by Marcin Szot</p>
+  </footer>
+</div>

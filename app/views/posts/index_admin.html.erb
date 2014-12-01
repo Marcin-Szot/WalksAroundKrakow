@@ -15,9 +15,22 @@
       </header>
 
       <div class = "content">
+
+        <div class = "categories_bar">
+          <ul>
+            <% @categories.each do |category| %>
+                <li><%= link_to category.title, category_path(category), style: 'text-decoration: none; color: black' %></li>
+            <% end %>
+          </ul>
+        </div>
+
           <div id = "post_creation">
               <%= link_to "DODAJ POSTA", new_post_path %>
           </div>
+
+        <div id = "category_creation">
+          <%= link_to "DODAJ KATEGORIĘ", new_category_path %>
+        </div>
 
           <% @posts.each do |post| %>
               <div class = "post">
