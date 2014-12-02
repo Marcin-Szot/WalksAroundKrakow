@@ -99,6 +99,11 @@ footer #sign {
     padding-left: 4px;
 }
 
+.categories_placeholder {
+    margin-top: -50px;
+    margin-bottom: 27px;
+}
+
 .categories_bar ul {
     overflow: hidden;
     width: 100%;
@@ -121,6 +126,12 @@ footer #sign {
 
 .categories_bar ul li:hover {
     background: darkorange;
+}
+
+.fixed {
+    position: fixed;
+    top: 50px;
+    z-index: 100;
 }
 
 .post {
