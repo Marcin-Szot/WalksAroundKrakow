@@ -42,6 +42,7 @@
             <% @post.images.each do |image| %>
                 <div class = "edit_photo_item">
                     <%= image_tag image.photo_url(:thumb).to_s %>
+
                   <div class = "editing_form">
                     <%= form_for :image, url: post_image_path(@post, image), method: :patch do |f| %>
                         <%= f.label "Tytuł:" %>
@@ -56,6 +57,7 @@
                         <%= f.text_field :category %> <br>
                         <%= f.submit "Zapisz" %>
                     <% end %>
+
                     <%= link_to 'Usuń zdjęcie', [image.post, image], method: :delete, data: {confirm: "Are you sure?"} %>
                   </div>
                 </div>

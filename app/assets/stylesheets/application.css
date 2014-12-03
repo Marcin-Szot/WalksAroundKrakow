@@ -219,7 +219,7 @@ footer #sign {
     float: right;
     border: 1px dashed grey;
     padding: 10px;
-    margin-right: 200px;
+    margin-right: 0px;
 }
 
 .editing_form textarea {
